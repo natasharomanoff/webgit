@@ -1,0 +1,10 @@
+.page-header
+  %h3 New Repository
+
+= flash[:notice]
+%form.form-vertical{ :action => "/repository/create", :method => "post" }
+  .control-group
+    %label.control-label{ :for => "reponame"} Name
+    .controls
+      %input#reponame{:type => "text", :name => "reponame", :placeholder => 'Repository name ...' }
+  %button.btn.btn-primary{:type => "submit"} Create  

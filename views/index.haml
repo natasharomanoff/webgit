@@ -1,0 +1,21 @@
+.page-header
+  %h3 Manage Repositories
+.row
+  .span8
+    %h4 Recent Repositories
+    %p
+      %table.table.table-hover.table-condensed
+        - @repos.each do |r|
+          %tr
+            %td
+              %a{ :href => show_repo_path(r)}= r.repo_name
+            %td.span1
+              %a{ :href => confirm_delete_repo_path(r)}
+                %i.icon-trash
+    %p
+      %a.btn{:href => "#"} View details »
+  .span4
+    %h4 Create Repository
+    %p To create a new git repository, click on the button below.
+    %p
+      %a.btn.btn-primary{:href => "/repositories/new"} Create »

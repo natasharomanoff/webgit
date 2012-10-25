@@ -1,0 +1,9 @@
+.page-header
+  %h3= "Delete #{@repo.repo_name}"
+.alert.alert-block.alert-error
+  %button.close{"data-dismiss" => "alert", :type => "button"} ×
+  %h4 Alert!
+  = "Are you sure, you want to delete repository named #{@repo.repo_name} ?"
+  %hr
+  %a.btn{ :href => root_path} Cancel
+  %a.btn.btn-primary{ :href => root_path} Delete
